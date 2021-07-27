@@ -31,7 +31,7 @@ form.addEventListener("submit", function (e) {
     if (password.value ===''){
         showerror(password,"Password is Required!");
     }else {
-        showsuccess(password);
+        showsuccess(gitpassword);
     }
 
     if (cfmpassword.value ===''){
