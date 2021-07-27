@@ -35,7 +35,7 @@ function updatecountdown(){
 
     const s = Math.floor(diff / 1000) % 60;
     // console.log(s);
-    const mili = Math.floor(diff%6000)/1000;
+    const mili = Math.floor(diff%1000)/10;
     // console.log(mili);
 
     days.textContent = d;
