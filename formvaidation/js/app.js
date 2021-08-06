@@ -108,7 +108,7 @@ function checklength(input,min,max){
 // Check Email is Vaild
 function checkemail(input) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    // return re.test(String(email).toLowerCase());
+      // return re.test(String(email).toLowerCase());
 
     if (re.test(input.value)){// test => string value check
         showsuccess(input);
