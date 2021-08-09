@@ -86,8 +86,14 @@ function loadsong(music){
 }
 
 // Event Listener for Play song
+window.addEventListener('keydown',function (e){
+    console.log(e.keyCode);
+    if(e.keyCode == 32 || e.keyCode == 13){
+        playbtn.click();
+    }
+})
 playbtn.addEventListener('click',()=>{
-    // console.log('hey');
+    // console.log('hello');
 
 
     const isplaying=musiccontainer.classList.contains('play');
@@ -100,6 +106,7 @@ playbtn.addEventListener('click',()=>{
 });
 
 // Play Song
+
 function playsong(){
     musiccontainer.classList.add('play');
 
@@ -122,6 +129,7 @@ function pausesong(){
 // ChangeSong
 prevbtn.addEventListener('click',previoussong);
 nextbtn.addEventListener('click',nextsong);
+
 
 // PreviousSong
 function previoussong(){
@@ -220,3 +228,5 @@ function setprogress(e){
     audio.currentTime= (clickx/width) * duration;
 
 }
+//Song End
+audio.addEventListener('ended',nextsong);
