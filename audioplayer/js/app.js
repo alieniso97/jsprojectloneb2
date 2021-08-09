@@ -198,3 +198,25 @@ function updateprogress(e){
 // time play and stop update
 // timeupdateအချိန်ပြောင်းလဲတဲ့အပေါ်မူတည်ပြီး function အလုပ်လုပ်စေချင်
 audio.addEventListener('timeupdate',updateprogress);
+
+// click on progress Bar
+progresscontainer.addEventListener('click',setprogress);
+
+// Set Progress Bar
+function setprogress(e){
+    // console.log(e.target);
+
+    // prgress containerရဲ့ widthကိုလှမ်းကောက်
+    const width= e.target.clientWidth;
+    // console.log(width);
+
+    const clickx=e.offsetX;
+    // console.log(clickx);
+
+    const duration= audio.duration;
+    // console.log(duration);
+
+    // currentTime ကို overwriteပြန်လုပ်တာ
+    audio.currentTime= (clickx/width) * duration;
+
+}
